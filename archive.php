@@ -20,19 +20,19 @@
 								?>
 
 								<?php /* If this is a category archive */ if (is_category()) { ?>
-									<h2 id="page-title"><?php printf(__('%s', 'framework'), single_cat_title('',false)); ?></h2>
+									<h1 id="page-title"><?php printf(__('%s', 'framework'), single_cat_title('',false)); ?></h1>
 								<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-									<h2 id="page-title"><?php printf(__('%s', 'framework'), single_tag_title('',false)); ?></h2>
+									<h1 id="page-title"><?php printf(__('%s', 'framework'), single_tag_title('',false)); ?></h1>
 								<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
-									<h2 id="page-title"><?php the_time('F jS, Y'); ?></h2>
+									<h1 id="page-title"><?php the_time('F jS Y'); ?></h1>
 								 <?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-									<h2 id="page-title"> <?php the_time('F, Y'); ?></h2>
+									<h1 id="page-title"> <?php the_time('F Y'); ?></h1>
 								<?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-									<h2 id="page-title"><?php the_time('Y'); ?></h2>
+									<h1 id="page-title"><?php the_time('Y'); ?></h1>
 								<?php /* If this is an author archive */ } elseif (is_author()) { ?>
-									<h2 id="page-title"><?php _e('Posts by','framework') ?><?php echo $curauth->display_name; ?></h2>
+									<h1 id="page-title"><?php _e('Les articles publiés par ','framework') ?><?php echo $curauth->display_name; ?></h1>
 								<?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-									<h2 id="page-title"><?php _e('Blog Archives', 'framework') ?></h2>
+									<h1 id="page-title"><?php _e('Blog Archives', 'framework') ?></h1>
 								<?php } ?>								
                                 
                                 <div class="clear"></div>
@@ -76,7 +76,7 @@
                                   
                                       <div class="post-meta">
                                           <span class="date"><?php the_time( get_option('date_format') ); ?> </span>
-                                          <span><?php _e('by','framework'); ?></span>
+                                          <span><?php _e('par','framework'); ?></span>
                                           <span class="author"><?php the_author_posts_link(); ?> </span>
                                                                                
                                       </div><!--cats-->
@@ -122,7 +122,7 @@
                                   
                                       <div class="post-meta">
                                           <span class="date"><?php the_time( get_option('date_format') ); ?> </span>
-                                          <span><?php _e('by','framework'); ?></span>
+                                          <span><?php _e('par','framework'); ?></span>
                                           <span class="author"><?php the_author_posts_link(); ?> </span>
                                                                                
                                       </div><!--cats-->
@@ -135,9 +135,6 @@
                                       
                                       </div><!--excerpt-->
                                       
-                                      <div class="more_link">
-                                        <a href="<?php the_permalink(); ?>"><?php _e('Read More','framework'); ?></a>
-                                      </div>
                                   
                                     </div><!--details-->
                                     
@@ -164,7 +161,7 @@
                         
                                 <div class="no">
                                     
-                                    <p><?php _e("Sorry, but you are looking for something that isn't here.", "framework") ?></p>
+                                    <p><?php _e("Désolé mais il n'y a pas de résultat ,) Peut-être serez-vous plus chanceux avec le moteur de recherche", "framework") ?></p>
                                     <?php get_search_form(); ?>
                                     
                                     <div class="clear"></div>

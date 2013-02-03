@@ -71,7 +71,7 @@ class posts_Thumb extends WP_Widget
             <li class="item">
                 
                 <?php if($show_thumb == 'yes'): ?>
-                    <div class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail() ?></a></div>
+                    <div class="thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('small') ?></a></div>
                 <?php endif; ?>
                 
                 <div class="details <?php if($show_thumb == 'no') echo 'no_thumb' ?>">

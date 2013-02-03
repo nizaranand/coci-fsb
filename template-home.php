@@ -52,7 +52,7 @@
                                   
                                       <div class="post-meta">
                                           <span class="date"><?php the_time( get_option('date_format') ); ?> </span>
-                                          <span><?php _e('by','framework'); ?></span>
+                                          <span><?php _e('par','framework'); ?></span>
 										  <span class="author"><?php the_author_posts_link(); ?> </span>
                                                                                
                                       </div><!--cats-->
@@ -159,7 +159,7 @@
                                                   
                                                       <div class="post-meta">
                                                           <span class="date"><?php the_time( get_option('date_format') ); ?> </span>
-                                                          <span><?php _e('by','framework'); ?></span>
+                                                          <span><?php _e('par','framework'); ?></span>
                                                           <span class="author"><?php the_author_posts_link(); ?> </span>
                                                                                                
                                                       </div><!--post-meta-->
@@ -260,7 +260,7 @@
                                             <div class="item clearfix">
 
 												<?php if (  (function_exists('has_post_thumbnail')) && (has_post_thumbnail())  ) : /* if post has post thumbnail */ 
-                                                    $thumb_small = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array(140,140));
+                                                    $thumb_small = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array(220,125));
                                                 ?>
                                             
                                                 <div class="image">
@@ -275,18 +275,13 @@
                                               
                                                   <div class="post-meta">
                                                       <span class="date"><?php the_time( get_option('date_format') ); ?> </span>
-                                                      <span><?php _e('by','framework'); ?></span>
+                                                      <span><?php _e('par','framework'); ?></span>
                                                       <span class="author"><?php the_author_posts_link(); ?> </span>
                                                                                            
                                                   </div><!--cats-->
                                                   
-                                                  <h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                                                  
-                                                  <div class="excerpt">
-                                                  
-                                                      <?php zd_excerpt('20'); ?>
-                                                  
-                                                  </div><!--excerpt-->
+                                                  <h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+
                                                   
                                                   <div class="more_link">
                                                     <a href="<?php the_permalink(); ?>"><?php _e('Read More','framework'); ?></a>

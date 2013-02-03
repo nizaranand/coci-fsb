@@ -14,7 +14,7 @@ global $data;
                     <div class="post-content clearfix column">
             		
                         <div id="page-top">
-                                <h2 id="page-title"><?php the_title(); ?></h2>
+                                <h1 id="page-title"><?php the_title(); ?></h1>
                          </div> <!--#page_top-->
                     
                                 		
@@ -48,7 +48,7 @@ global $data;
                             <!--BEGIN #post-0-->
                             <div id="post-0" <?php post_class(); ?>>
                             
-                                <h2 class="entry-title"><?php _e('Error 404 - Not Found', 'framework') ?></h2>
+                                <h1 class="entry-title"><?php _e('Error 404 - Not Found', 'framework') ?></h1>
                             
                                 <p class="error_msg"><?php _e("Sorry, but you are looking for something that isn't here. Try another search", "framework") ?></p>
                             

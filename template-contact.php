@@ -13,24 +13,24 @@ $emailError = '';
 $commentError = '';
 if(isset($_POST['submitted'])) {
 		if(trim($_POST['contactName']) === '') {
-			$nameError = 'Please enter your name.';
+			$nameError = 'Veuillez entrer votre nom';
 			$hasError = true;
 		} else {
 			$name = trim($_POST['contactName']);
 		}
 		
 		if(trim($_POST['email']) === '')  {
-			$emailError = 'Please enter your email address.';
+			$emailError = 'Veuillez entrer une adresse email';
 			$hasError = true;
 		} else if (!eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", trim($_POST['email']))) {
-			$emailError = 'You entered an invalid email address.';
+			$emailError = 'Veuillez entrer une adresse email valide';
 			$hasError = true;
 		} else {
 			$email = trim($_POST['email']);
 		}
 			
 		if(trim($_POST['comments']) === '') {
-			$commentError = 'Please enter a message.';
+			$commentError = 'Veuillez entrer un message';
 			$hasError = true;
 		} else {
 			if(function_exists('stripslashes')) {
@@ -67,7 +67,7 @@ if(isset($_POST['submitted'])) {
                 <div class="post-content clearfix column">
                 			
                 <div id="page-top">
-                        <h2 id="page-title">
+                        <h1 id="page-title">
                             <?php 
                             global $post;
                             global $post;
@@ -77,7 +77,7 @@ if(isset($_POST['submitted'])) {
                                 the_title();
                             endif; 
                             ?>
-                        </h2>
+                        </h1>
                  </div> <!--#page_top-->
                 
                 	
@@ -102,7 +102,7 @@ if(isset($_POST['submitted'])) {
 						
 						<?php if($data['contact_address'] != ''): ?>
                         <div class="address">
-							<h4 class="title"><?php _e("Address","framework") ?></h4>
+							<h4 class="title"><?php _e("Adresse","framework") ?></h4>
 							<?php echo tz_seperate_message($data['contact_address']) ?>
                         </div>
                         <?php endif; ?>
@@ -110,7 +110,7 @@ if(isset($_POST['submitted'])) {
                         <?php if($data['contact_email'] != ''): ?>
                         
                         <div class="email">
-                            <h4 class="title"><?php _e("Email","framework") ?></h4>
+                            <h4 class="title"><?php _e("Contact","framework") ?></h4>
                             <?php echo tz_seperate_message($data['contact_email']) ?>
                         </div>
                         <?php endif; ?>
@@ -123,7 +123,7 @@ if(isset($_POST['submitted'])) {
 					<?php if(isset($emailSent) && $emailSent == true) { ?>
     
                         <div class="thanks">
-                            <p><?php _e('Thanks, your email was sent successfully.', 'framework') ?></p>
+                            <p><?php _e('Merci, votre message a bien été envoyé', 'framework') ?></p>
                         </div>
     
                     <?php } else { ?>
@@ -131,7 +131,7 @@ if(isset($_POST['submitted'])) {
                         <?php the_content(); ?>
             
                         <?php if(isset($hasError) || isset($captchaError)) { ?>
-                            <p class="error"><?php _e('Sorry, an error occurred.', 'framework') ?><p>
+                            <p class="error"><?php _e('Désolé, une erreur est survenue lors de l\'envoi du message', 'framework') ?><p>
                         <?php } ?>
                         
                         <h3><?php echo $data['form_title'] ?></h3>
@@ -139,7 +139,7 @@ if(isset($_POST['submitted'])) {
                         <form action="<?php the_permalink(); ?>" id="contactForm" method="post">
                             <ul class="contactform clearfix">
                                 <li class="name clearfix"><p>
-                                <label for="contactName"><small><?php _e('Name', 'framework') ?><span class="star">*</span></small></label>
+                                <label for="contactName"><small><?php _e('Nom', 'framework') ?><span class="star">*</span></small></label>
                                     <input type="text" name="contactName" id="contactName" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" class="required requiredField" />
                                     <?php if($nameError != '') { ?>
                                         <span class="error"><?php echo $nameError; ?></span> 
@@ -157,7 +157,7 @@ if(isset($_POST['submitted'])) {
                                 
                                 <li><div class="clear"></div></li>
                     	
-                                <li class="textarea"><p><label for="commentsText"><small><?php _e('Your Message', 'framework') ?><span class="star">*</span></small></label>
+                                <li class="textarea"><p><label for="commentsText"><small><?php _e('Votre message', 'framework') ?><span class="star">*</span></small></label>
                                     <textarea name="comments" id="commentsText" rows="20" cols="30" class="required requiredField"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
                                     <?php if($commentError != '') { ?>
                                         <span class="error"><?php echo $commentError; ?></span> 
@@ -167,7 +167,7 @@ if(isset($_POST['submitted'])) {
                     
                                 <li class="buttons">
                                     <input type="hidden" name="submitted" id="submitted" value="true" />
-                                    <button id="submit" type="submit"><?php _e('Send Message', 'framework') ?></button>
+                                    <button id="submit" type="submit"><?php _e('ENVOYER', 'framework') ?></button>
                                 </li>
                             </ul>
                         </form>
@@ -186,7 +186,7 @@ if(isset($_POST['submitted'])) {
 				<!--BEGIN #post-0-->
 				<div id="post-0" <?php post_class(); ?>>
 				
-					<h2 class="entry-title"><?php _e('Error 404 - Not Found', 'framework') ?></h2>
+					<h1 class="entry-title"><?php _e('Error 404 - Not Found', 'framework') ?></h1>
 				
 					<!--BEGIN .entry-content-->
 					<div class="entry-content">

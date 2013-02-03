@@ -1,41 +1,27 @@
 /*-----------------------------------------------------------------------------------
 
-	Theme Name: Elus fdg
+	Theme Name: ELus Fdg
 
-	Description: A clean cut magazine or blog theme with stylish looks enough to make your website a style statement.
+	Description: Un theme pour les groupes ou les blogs d'élus du Front de gauche
 	
-	Author: Jdsans
-	Author URI:http://themeforest.net/user/jdsans
-	Theme URI:http://themes.jdsans.net/zend/
-	Theme Developer: Jdsans (http://themeforest.net/user/jdsans)
-	Theme Designer: JohnPixle (http://themeforest.net/user/JohnPixle)
+	Author: laPopinc
+	Author URI:http://www.lapopinc.net
+	Theme Developer: laPopinc (vince@lapoinc.net)
+	Theme Designer: laPopinc (vince@lapoinc.net)
 	
 	Tags: black, two-columns, threaded-comments, post-formats, custom-menu 	
 	
 	License: GNU General Public License version 3.0
 	License URI: http://www.gnu.org/licenses/gpl-3.0.html
-	Version: 2.2
+	Version: 0.2
 	
 	All files, unless otherwise stated, are released under the GNU General Public License
 	version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
 
 -----------------------------------------------------------------------------------*/
-@font-face {
-    font-family: 'novecento';
-    src: url('fonts/novecentowide-bold-webfont.eot');
-    src: url('fonts/novecentowide-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/novecentowide-bold-webfont.woff') format('woff'),
-         url('fonts/novecentowide-bold-webfont.ttf') format('truetype'),
-         url('fonts/novecentowide-bold-webfont.svg#NovecentowideBookBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-  font-family: 'Passion One';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Passion One Bold'), local('PassionOne-Bold'), url(http://themes.googleusercontent.com/static/fonts/passionone/v3/feOcYDy2R-f3Ysy72PYJ2jqR_3kx9_hJXbbyU8S6IN0.woff) format('woff');
-}
+
+/*L'import des fonts se fait dans le dossier fonts*/
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	CSS Reset & Clearfix - http://meyerweb.com/eric/tools/css/reset/
@@ -50,16 +36,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /*-----------------------------------------------------------------------------------*/
 
 body {
-  color: #5c5c5c;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 14px;
+	color: #000000;
+	font-family: 'Source Sans Pro',"Helvetica Neue",Helvetica,Arial,sans-serif;  font-size: 14px;
   line-height: 23px;
   margin: 0;
   padding: 0;
 }
 a {
     text-decoration: none;
-    color:#444;
+    color:#333;
 }
 a:hover { 
 	text-decoration: none; 
@@ -132,7 +117,7 @@ h5,
 h6 {
 	font-weight: normal;
 	padding: 0;
-	font-family:Arial,Helvetica,sans-serif;
+	font-family:"BrixSlab-Bold",Georgia,Arial,Helvetica,sans-serif;
 }
 
 h1 {
@@ -146,8 +131,8 @@ h2 {
 }
 
 h3 {
-	font-size: 16px;
-	line-height: 20px;
+	font-size: 18px;
+	line-height: 22px;
 }
 
 h4 {
@@ -167,7 +152,7 @@ h6 {
 .inner_wrap {
   background:#FFFFFF;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-  margin: 30px auto  !important;
+  margin: 0px auto  !important;
 }
 .inner_wrap,.footer_inner{
   max-width: 1034px !important;
@@ -284,8 +269,8 @@ h6 {
 }
 #logo .title {
   color: #353535;
-  font-family: 'Passion One',cursive;
-  font-size: 80px;
+  font-family: "BrixSlab-Bold";
+  font-size: 22px;
   line-height: 84px;
 }
 #logo .description {
@@ -295,7 +280,7 @@ h6 {
   margin-left: 17px;
   padding: 20px 0 20px 17px;
   position: relative;
-  top: -20px;
+  top: 0px;
   width: 100%;
 }
 /*-----Social sharing------*/
@@ -370,6 +355,7 @@ h6 {
 #primary-nav ul a {
 	display: block;
 	position: relative;
+	text-transform: uppercase;
 }
 #primary-nav ul li {
   float: left;
@@ -536,11 +522,19 @@ blockquote p{
   margin-bottom:10px;
 }
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
-  font-family: novecento;
+  font-family: "BrixSlab-Bold";
   margin: 10px 0;
 }
+.entry-content p,.entry-content ul  {
+	font-size: 110%;
+}
 .entry-content a{
-	font-weight:bold;
+	border-bottom: 1px dashed #FA0000;
+	-webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; transition: all 0.5s ease;
+}
+.entry-content a:hover {
+	color: #FA0000;
+	border-bottom: 1px dashed #ffffff;
 }
 .single .entry-content ul {
   list-style: disc inside none;
@@ -549,11 +543,9 @@ blockquote p{
   list-style: decimal inside none;
 }
 .single .entry-content ul li, .single .entry-content ol li {
-  background: url("images/hor_dash.png") repeat-x;
   padding: 5px 0;
 }
 .entry-content ul li:first-child, .entry-content ol li:first-child {
-  background: none;
   padding-top: 0;
 }
 
@@ -563,7 +555,7 @@ blockquote p{
   position: relative;
   zoom: 1;
 }
-.flex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
+.flex-viewport {height:520px !important; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
 .loading .flex-viewport {max-height: 300px;}
 .flexslider .slides {zoom: 1;}
 .flex-control-nav {
@@ -601,10 +593,14 @@ blockquote p{
   font-size: 11px;
   font-weight: bold;
   line-height: 20px;
+  opacity: 0.8;
 }
 .hentry .post-meta{
 	font-size:12px !important;
 	margin-bottom:5px;
+}
+.hentry .top-post-meta {
+	background: url("images/hor_dash.png") repeat-x scroll center bottom transparent;
 }
 .item .details .post-meta a:hover,#sidebar .item .details .post-meta a:hover, .hentry .post-meta a:hover,.entry-content strong,.entry-content b{
 	color:#353535;
@@ -649,11 +645,12 @@ blockquote p{
 .cat-title h2,#related-posts .main-title h2{
   background: url("images/hor_dash.png") repeat-x 0 bottom;
   padding-bottom: 17px;
+  font-size: 24px;
 }
 .cat-content .flex-direction-nav {
   position: absolute;
-  right: 0;
-  top: -78px;
+  right: 8px;
+  top: -72px;
 }
 .cat-content .flex-direction-nav li {
   float: left;
@@ -663,15 +660,19 @@ blockquote p{
   border-radius: 2px;
   cursor: pointer;
   display: inline-block;
-  height: 40px;
+  height: 26px;
   text-indent: -9999px;
-  width: 40px;
+  width: 26px;
 }
 .cat-content .flex-direction-nav .flex-next {
-  background:url("css/images/sprites.png") no-repeat 0 -61px #444444;
+  background:url("css/images/sprites.png") no-repeat -7px -66px #68CE38;
 }
 .cat-content .flex-direction-nav .flex-prev {
-  background:url("css/images/sprites.png") no-repeat -1px -20px #444444;
+  background:url("css/images/sprites.png") no-repeat -7px -25px #68CE38;
+}
+.cat-content .flex-direction-nav a:hover {
+	border: 0px none;
+	background-color: #02ff30;
 }
 .cat-container.two-columns .item, .two_columns.item {
   float: left;
@@ -685,6 +686,11 @@ blockquote p{
 .cat-container.single-column .item,.single_column.item {
   margin-bottom: 30px;
 }
+.cat-container.single-column .image {
+	height: 125px;
+	width: 220px;
+	overflow: hidden;
+}
 .cat-container.single-column .image ,.single_column.item .image img{
   float: left;
   margin-bottom: 0;
@@ -692,18 +698,40 @@ blockquote p{
 }
 .cat-container.single-column .details,.single_column.item .details{
   float: left;
-  width: 490px;
+  width: 410px;
 }
 .cat-container .item p{
 	margin-bottom:15px;
 }
-#page-top h2#page-title,.hentry .post_title {
+.cat-container a{
+	color: #000000;
+}
+.cat-container a:hover{
+	border-bottom: 1px dashed #FA0000;
+	color: #000000;
+}
+.cat-container.two-columns .item .image {
+	height: 169px;
+	overflow: hidden;
+}
+
+h4.categories {
+	color: #666;
+	padding: 0px 8px 8px 0px;
+}
+#page-top h1#page-title,.hentry .post_title {
   background: url("images/hor_dash.png") repeat-x bottom;
   font-size: 32px;
-  line-height: 36px;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  color:#353535;
+  line-height: 40px;
+  margin-bottom: 0px;
+  padding-bottom: 18px;
+  color:#222;
+}
+#page-top h1#page-title:first-letter,.hentry .post_title:first-letter {
+	text-transform: uppercase;
+}
+#page-top h1#page-title {
+	margin-bottom: 20px;
 }
 
 /*------------ Page Navigation--------*/
@@ -726,8 +754,7 @@ blockquote p{
     border-radius:3px;
     color: #FFFFFF !important;
     display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 14px;
     margin: 0 10px 0 0 !important;
     padding: 8px 15px !important;
 }
@@ -749,7 +776,7 @@ blockquote p{
 #sidebar .widget {
   background: url("images/hor_dash.png") repeat-x 0 top;
   margin-top: 20px;
-  padding: 20px 0 0px;
+  padding: 14px 0px 20px 0px;
 }
 #sidebar .widget:first-child{
 	background:none;
@@ -759,7 +786,9 @@ blockquote p{
 #sidebar .widget .widget-title {
   font-size: 20px;
   line-height: 28px;
+  padding-bottom: 14px;
   margin-bottom: 20px;
+  background: url("images/hor_dash.png") repeat-x scroll 0 bottom transparent;
 }
 #sidebar .widget ul{
 	margin-bottom:0;
@@ -768,7 +797,7 @@ blockquote p{
 	color:#353535;
 }
 #sidebar .widget_archive {
-  font-family: novecento;
+  font-family: "BrixSlab-Bold";
   font-size: 15px;
 }
 
@@ -817,6 +846,18 @@ ul.ad_spots li {
 #sidebar .post-thumb .details h4 a {
   display: inline-block;
   font-size: 14px;
+}
+#sidebar .posts_Thumb .thumbnail a {
+	border-radius: 30px 30px 30px 30px;
+	display: block;
+	height: 50px;
+	overflow: hidden;
+	text-align: center;
+	vertical-align: middle;
+	width: 50px;
+}
+#sidebar .posts_Thumb .thumbnail a img{
+	max-width: 80px !important;
 }
 
 /*--------Recent Widgets(Comment and entries)---------*/
@@ -904,7 +945,7 @@ ul.ad_spots li {
   white-space: nowrap;
 }
 .tag_list li a {
-  background:#353535;
+  background:#68CE38;
   border-radius: 2px 2px 2px 2px;
   color: #FFFFFF !important;
   display: inline-block;
@@ -1074,7 +1115,12 @@ ul.ad_spots li {
 .wp-caption-text {
   line-height: 22px;
 }
-
+/*
 #header-nav ul li,.header-top.mobile #menu-icon,.header-top.mobile .mobile_cont li,#primary-nav ul li,#mobile-nav,.item .details .title,.cat-title h2,#related-posts .main-title h2,#page-top h2#page-title,.hentry .post_title,#sidebar .widget .widget-title,#sidebar .post-thumb .details h4 a,#footer .post-thumb .details h4 a,.single-post .hentry #author h4.heading,#comments h3, #respond h3,.page-template-template-contact-php h3,#comments .comment-header .author,#respond label, #contactForm label,.contact_details h2,#footer .widget .widget-title,.footer_inner #footer-nav li a{
-	font-family:"Novecento",tahoma;
+	font-family:"BrixSlab-Bold";
 }
+*/
+#header-nav ul li,.header-top.mobile #menu-icon,.header-top.mobile .mobile_cont li,#primary-nav ul li,#mobile-nav,.item .details .title,.cat-title h2,#related-posts .main-title h2,#page-top h2#page-title,.hentry .post_title,#sidebar .widget .widget-title,#sidebar .post-thumb .details h4 a,#footer .post-thumb .details h4 a,.single-post .hentry #author h4.heading,#comments h3, #respond h3,.page-template-template-contact-php h3,#comments .comment-header .author,#respond label, #contactForm label,.contact_details h2,#footer .widget .widget-title,.footer_inner #footer-nav li a{
+	font-family:"BrixSlab-Bold";
+}
+.more_link {display: none !important;}

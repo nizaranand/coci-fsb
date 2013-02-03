@@ -17,17 +17,18 @@
                         <!--BEGIN .hentry -->
                         <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">	
                                                                                                               
-                  			<div class="post-meta">
-                                <span class="date"><?php the_time( get_option('date_format') ); ?> </span>
-                                <span><?php _e('by','framework'); ?></span>
-                                <span class="author"><?php the_author_posts_link(); ?> </span>
-                                                                     
-                            </div><!--cats-->
+
                             
-                            <h2 class="post_title">
+                            <h4 class="categories"><?php the_category(' &bull; ','multiple') ?></h4>
+                            <h1 class="post_title">
                                 <?php the_title(); ?>
-                            </h2><!--END .post-title -->
+                            </h1><!--END .post-title -->
                             
+                  			<div class="post-meta top-post-meta">
+                                <span class="date"><?php the_time( get_option('date_format') ); ?> </span>
+                                <span><?php _e('par','framework'); ?></span>
+                                <span class="author"><?php the_author_posts_link(); ?> </span>                      
+                            </div><!--cats-->                            
                                                             
                             <!--BEGIN .entry-content -->
                             <div class="entry-content">
@@ -92,7 +93,7 @@
                             <div id="related-posts" class="clearfix cat-container two-columns">
                                 
                                 <div class="main-title clearfix">
-                                     <h2><?php _e('Related Posts', 'framework'); ?></h2>                         
+                                     <h2><?php _e('À lire aussi', 'framework'); ?></h2>                         
                                  </div>
                 
                                 <div class="cat-content related-content flexslider">                           
@@ -147,18 +148,17 @@
                                             
                                                 <div class="post-meta">
                                                     <span class="date"><?php the_time( get_option('date_format') ); ?> </span>
-                                                    <span><?php _e('by','framework'); ?></span>
+                                                    <span><?php _e('par','framework'); ?></span>
                                                     <span class="author"><?php the_author_posts_link(); ?> </span>
                                                                                          
                                                 </div><!--post-meta-->
                                                 
-                                                <h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                                                
+                                                <h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                                 <div class="excerpt">
-                                                
-                                                    <?php zd_excerpt('short'); ?>
-                                                
-                                                </div><!--excerpt-->
+                                                      
+                                                          <?php zd_excerpt('30'); ?>
+                                                      
+                                                      </div><!--excerpt-->
                                                 
                                                 <div class="more_link">
                                                   <a href="<?php the_permalink(); ?>">Read More</a>

@@ -77,7 +77,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 70, 70, true ); // Normal post thumbnails
 	add_image_size( 'medium', 315, '', true ); // Medium thumbnails
-	add_image_size( 'small', 140, 140, true ); // Small thumbnails
+	add_image_size( 'small', 220, '', true ); // Small thumbnails
 	add_image_size( 'post-large', 650, 350, true ); // Post thumbnails
 	add_image_size( 'fullsize', '', '', true ); // Fullsize
 }

@@ -1,0 +1,27 @@
+/* @license
+ * MyFonts Webfont Build ID 2462476, 2013-01-28T17:11:16-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Brix Slab Bold by HVD Fonts
+ * URL: http://www.myfonts.com/fonts/hvdfonts/brix-slab/bold/
+ * Copyright: Copyright (c) 2011 by Hannes von Doehren, Livius Dietzel. All rights reserved.
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2462476
+ * 
+ * © 2013 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/25930c");
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic");
+
+  
+@font-face {font-family: 'BrixSlab-Bold';src: url('25930C_0_0.eot');src: url('25930C_0_0.eot?#iefix') format('embedded-opentype'),url('25930C_0_0.woff') format('woff'),url('25930C_0_0.ttf') format('truetype');}
+ 

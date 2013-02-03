@@ -49,7 +49,7 @@
                 
                 <div class="footer_inner attribution clearfix row">
                 
-                    <p class="copyright">&copy; Copyright <?php echo date( 'Y' ); ?><span><?php echo $data['copyright'] ?></span></p>
+                    <p class="copyright"><?php echo date( 'Y' ); ?><span><?php echo $data['copyright'] ?></span></p>
                 	                   
                       <div id="footer-nav">
                           <?php if ( has_nav_menu( 'footer-menu' ) ) { /* if menu location 'primary-menu' exists then use custom menu */ ?>

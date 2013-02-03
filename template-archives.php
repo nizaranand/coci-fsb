@@ -16,7 +16,7 @@ Template Name: Archives
 					<div class="post-content">
             		
                         <div id="page-top">
-                                <h2 id="page-title">
+                                <h1 id="page-title">
                                     <?php 
                                     global $post;
                                     global $post;
@@ -26,7 +26,7 @@ Template Name: Archives
                                         the_title();
                                     endif; 
                                     ?>
-                                </h2>
+                                </h1>
                          </div> <!--#page_top-->                    
                     
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -46,8 +46,8 @@ Template Name: Archives
                                   <div class="month_archive">
                                   
                                       <div class="title">
-                                          <span class="month"><?php echo date( 'F', mktime(0, 0, 0, $month) );?></span>
-                                          <span class="year"><?php echo $year; ?></span>
+                                          <h2><span class="month"><?php echo date( 'F', mktime(0, 0, 0, $month) );?>
+                                          <span class="year"><?php echo $year; ?></span></h2>
                                       </div>
 
                                       <ul class="archive_list">
@@ -109,10 +109,10 @@ Template Name: Archives
 										  ?>
    
                                               <li>
-                                              	<a class="title" href="<?php echo get_permalink($theid->ID); ?>"><?php echo $theid->post_title; ?></a>
+                                              	<h3><a class="title" href="<?php echo get_permalink($theid->ID); ?>"><?php echo $theid->post_title; ?></a></h3>
                                                 <div class="clear"></div>                                                
                                                 <span class="date"><?php echo $hu_mon.' '.$day; ?></span>
-												<span><?php _e('in category','framework'); ?></span>                              
+												<span><?php _e('dans','framework'); ?></span>                              
                                                 <span class="category">                                                
 												<?php 
 													$post_categories = wp_get_post_categories($theid->ID);

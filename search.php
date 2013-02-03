@@ -9,7 +9,7 @@
                             
                         
                         <div id="page-top">
-                             <h2 id="page-title"><?php echo ('Search Results for '.$s); ?></h2>	
+                             <h1 id="page-title">Rechercher : <em><?php echo $s; ?></em></h1>	
                          </div> <!--#page_top-->
                     
                                               
@@ -51,10 +51,7 @@
                                           <?php zd_excerpt('20'); ?>
                                       
                                       </div><!--excerpt-->
-                                      
-                                      <div class="more_link">
-                                        <a href="<?php the_permalink(); ?>"><?php _e('Read More','framework'); ?></a>
-                                      </div>
+
                                   
                                     </div><!--details-->
                                     

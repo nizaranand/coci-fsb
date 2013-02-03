@@ -11,7 +11,7 @@ if ( post_password_required() ) {
 
 <div id="comments" class="clearfix">
 
-    <h3 id="comments"><?php comments_number('No Comments', 'One Comment', '% Comments' );?></h3>
+    <h3 id="comments"><?php comments_number('Aucun Commentaire', 'Un Commentaire', '% Commentaires' );?></h3>
      
     <ol class="commentlist">
 		<?php wp_list_comments('type=comment&avatar_size=60&callback=theme_comment'); ?>
@@ -37,9 +37,9 @@ if ( post_password_required() ) {
 <?php else : // this is displayed if there are no comments so far ?>
 
 	<?php if ($post->comment_status == 'open') : ?>
-        <p>There are no comments yet, add one below.</p>
+        <p style="margin-top:20px;" >Il n'y a aucun commentaire à cet article. <strong>Soyez le premier !</strong></p>
     <? else : ?>
-        <p>Comments are closed.</p>
+        <p style="margin-top:20px;">&nbsp;</p>
     <?php endif; ?>
 
 <? endif; 
@@ -53,7 +53,7 @@ $req = get_option( 'require_name_email' );
 $aria_req = ( $req ? " aria-required='true'" : '' );
 
 $fields =  array(
-	'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name', 'domainreference' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
+	'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Nom', 'domainreference' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
 	            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
 	'email'  => '
 	<p class="comment-form-email"><label for="email">' . __( 'Email', 'domainreference' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
@@ -62,10 +62,10 @@ $fields =  array(
 
 $defaults = array(
 	'fields'               => apply_filters( 'comment_form_default_fields', $fields ),
-	'title_reply'          => 'Leave a Comment',
-	'title_reply_to'       => __( 'Leave a Reply to %s' ),
-	'cancel_reply_link'    => __( 'Cancel reply' ),
-	'label_submit'         => __( 'Submit Comment' ),
+	'title_reply'          => 'Commenter',
+	'title_reply_to'       => __( 'Laisser un commentaire pour %s' ),
+	'cancel_reply_link'    => __( 'Annuler réponse' ),
+	'label_submit'         => __( 'Laisser un commentaire' ),
 	'comment_notes_after'  => ''
 );
 

@@ -10,7 +10,7 @@
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
+    
 	<!-- Title -->
 	<title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?><?php echo ' | '; ?><?php bloginfo('description'); ?></title>
 
@@ -33,8 +33,16 @@
 	<!--Color CSS-->
 	<?php $primary_color = $data['primary_color'];?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/color.php?color=<?php echo substr($primary_color,1) ?>" type="text/css" media="screen" />
-
+    
+    <!-- Ajouter les fonts -->
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/MyFontsWebfontsKit.css" type="text/css" />
+    
+    
+    <!-- Pour le dev le truc est desactive -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style_load.php" type="text/css" media="screen" />
+    
+    
+
   
 	<!-- RSS & Pingbacks -->
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo( 'name' ); ?> RSS Feed" href="<?php if ($data['feedburner'] != '') { echo $data['feedburner']; } else { bloginfo( 'rss2_url' ); } ?>" />
@@ -55,28 +63,6 @@
     	<div class="inner_wrap row">
         
         <div id="header" class="clearfix">
-                         	
-                  <div class="header-top main clearfix">
-                  	
-                      <div id="header-nav">
-                          <?php if ( has_nav_menu( 'header-top-menu' ) ) { /* if menu location 'primary-menu' exists then use custom menu */ ?>
-                          <?php wp_nav_menu( array( 'menu_id'=>'top_main','theme_location' => 'header-top-menu','walker' => new description_walker()) ); ?>
-                          <?php } else { /* else use wp_list_categories */
-                          ?>
-                          <ul>
-                              <?php wp_list_pages(array( 'title_li' => '')); ?>
-                          </ul>
-                          <?php } ?>
-                              
-                      </div>
-                      
-                      <!--BEGIN #searchform-->
-                      <form method="get" class="searchform alignright" action="<?php echo home_url(); ?>/">
-                          <input type="text" name="s" class="s" value="" placeholder="<?php _e('Type Keyword and hit enter', 'framework') ?>" />
-                          <input type="submit" class="searchsubmit" value="<?php _e('go', 'framework') ?>">
-                      </form><!--END #searchform-->
-                  
-                  </div> <!--header-top-->
 
 
                   <div class="header-top mobile clearfix">
@@ -173,7 +159,7 @@
                   
                       <div id="primary-nav">
                           <?php if ( has_nav_menu( 'primary-menu' ) ) { /* if menu location 'primary-menu' exists then use custom menu */ ?>
-                          <?php wp_nav_menu( array( 'menu_id'=>'primary_main','theme_location' => 'primary-menu','walker' => new description_walker())); ?>
+                          <?php wp_nav_menu( array( 'theme_location' => 'primary-menu')); ?>
                           <?php } else { /* else use wp_list_categories */
                           ?>
                           <ul>
@@ -185,7 +171,7 @@
                       
                       <div id="mobile-nav">
                           <?php if ( has_nav_menu( 'primary-menu' ) ) { /* if menu location 'primary-menu' exists then use custom menu */ ?>
-                          <?php wp_nav_menu( array( 'menu'=>'primary_mobile','theme_location' => 'primary-menu' ,'walker' => new description_walker())); ?>
+                          <?php wp_nav_menu( array( 'menu'=>'primary_mobile','theme_location' => 'primary-menu')); ?>
                           <?php } else { /* else use wp_list_categories */
                            ?>
                           <ul>
