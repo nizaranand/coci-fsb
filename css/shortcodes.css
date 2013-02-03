@@ -1,0 +1,328 @@
+/*-----------------------------------------------------------------------------------*/
+/*	Shortcode Styles
+/*-----------------------------------------------------------------------------------*/
+
+/* Columns */
+.one-half {
+  width: 48.5%;
+}
+.one-third {
+  width: 31.33%;
+}
+.one-fourth {
+  width: 22.75%;
+}
+.one-fifth {
+  width: 17.6%;
+}
+.one-sixth {
+  width: 14.16%;
+}
+.two-third { width: 65.33%; }
+.three-fourth { width: 74%; }
+.two-fifth { width: 37%; }
+.three-fifth { width: 57%; }
+.four-fifth { width: 67.2%; }
+.five-sixth { width: 82.67%; }
+
+.one-half,
+.one-third,
+.two-third,
+.three-fourth,
+.one-fourth,
+.one-fifth,
+.two-fifth,
+.three-fifth,
+.four-fifth,
+.one-sixth,
+.five-sixth {
+	position: relative;
+	margin-right: 3%;
+	margin-bottom: 20px;
+	float: left;
+}
+
+.last {
+	margin-right: 0!important;
+	clear: right;
+}
+
+/* Buttons ------------------------------*/
+
+a.button,a.button:hover {
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	
+	background-image: url("../images/shortcodes/gradient_small.png");
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	height: 20px;
+	line-height: 12px;
+	margin: 0 5px 20px;
+	padding: 8px 10px 0;
+	text-decoration: none;
+}
+
+a.button.large {
+	height: 24px;
+  	background-image: url("../images/shortcodes/gradient_large.png");
+	padding: 11px 10px 0 10px;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+a:hover.button { background-image: url("../images/shortcodes/gradient_small_hover.png"); }
+a:hover.button.large { background-image: url("../images/shortcodes/gradient_large_hover.png"); }
+
+a.button.white {
+  background-color: white;
+  border: 1px solid #AAAAAA;
+  color: #777777 !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+a.button.grey {
+  background-color: grey;
+  border: 1px solid #444444;
+  color: #444 !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+a.button.red {
+  background-color: #FF3939;
+  border: 1px solid #B40000;
+  color: #B80C23 !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+a.button.orange {
+  background-color: orange;
+  border: 1px solid #BA7500;
+  color: #A4611F !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+a.button.green {
+  background-color: #37AA36;
+  border: 1px solid #66851C;
+  color: #597821 !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+a.button.teal {
+  background-color: #15A4A2;
+  border: 1px solid #127E84;
+  color: #217478 !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+a.button.blue {
+  background-color: #36BAEE;
+  border: 1px solid #17759A;
+  color: #2D7F9F !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+a.button.navy {
+  background-color: #6766F1;
+  border: 1px solid #302EA0;
+  color: #403FA0 !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+a.button.purple {
+  background-color: #C06CE3;
+  border: 1px solid #7C25A0;
+  color: #7D24A2 !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+a.button.black {
+  background-color: #000000;
+  border: 1px solid black;
+  color: #FEFEFE !important;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Alerts ------------------------------*/
+
+.alert {
+	font-style: italic;
+	margin: 0 0 20px;
+	padding: 12px 5%;
+	text-align: center;
+}
+.alert.red {
+	-webkit-box-shadow: 0 1px 0 #F9F0EE inset;
+	-moz-box-shadow: 0 1px 0 #F9F0EE inset;
+	box-shadow: 0 1px 0 #F9F0EE inset;
+
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#F9E3DF), to(#F4D6D0));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#F9E3DF', endColorstr='#F4D6D0');/*For IE7-8-9*/ 
+	background:  -moz-linear-gradient(#F9E3DF, #F4D6D0);
+	background:  -o-linear-gradient(#F9E3DF, #F4D6D0);
+	background:  -ms-linear-gradient(#F9E3DF, #F4D6D0);
+	background:  linear-gradient(#F9E3DF, #F4D6D0);
+	border-color: #EDCCC5 #DCB2AA #CC9E94;
+	border-style: solid;
+	border-width: 1px;
+	color: #B75440;
+}
+
+.alert.yellow {
+	-webkit-box-shadow: 0 1px 0 #FFF7E3 inset;
+	-moz-box-shadow: 0 1px 0 #FFF7E3 inset;
+	box-shadow: 0 1px 0 #FFF7E3 inset;
+
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#FBECC3), to(#FBE4A7));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FBECC3', endColorstr='#FBE4A7');/*For IE7-8-9*/ 
+	background: -moz-linear-gradient(#FBECC3, #FBE4A7);
+	background: -o-linear-gradient(#FBECC3, #FBE4A7);
+	background: -ms-linear-gradient(#FBECC3, #FBE4A7);
+	background: linear-gradient(#FBECC3, #FBE4A7);
+	border-color: #F7DA8E #F4CF6B #DDB447;
+	border-style: solid;
+	border-width: 1px;
+	color: #CC6600;
+}
+
+.alert.green {
+	-webkit-box-shadow: 0 1px 0 #F3FCF2 inset;
+	-moz-box-shadow: 0 1px 0 #F3FCF2 inset;
+	box-shadow: 0 1px 0 #F3FCF2 inset;
+
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#D3FBD1), to(#B8F9B5));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#D3FBD1', endColorstr='#B8F9B5');/*For IE7-8-9*/ 
+	background: -moz-linear-gradient(#D3FBD1, #B8F9B5);
+	background: -o-linear-gradient(#D3FBD1, #B8F9B5);
+	background: -ms-linear-gradient(#D3FBD1, #B8F9B5);
+	background: linear-gradient(#D3FBD1, #B8F9B5);
+	border-color: #ACEFA9 #A3E4A0 #72D26D;
+	border-style: solid;
+	border-width: 1px;
+	color: #5F8B33;
+}
+.alert.blue{
+	-webkit-box-shadow: 0 1px 0 #EDFAFF inset;
+	-moz-box-shadow: 0 1px 0 #EDFAFF inset;
+	box-shadow: 0 1px 0 #EDFAFF inset;
+
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#D1EFFB), to(#BAE1F1));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#D1EFFB', endColorstr='#BAE1F1');/*For IE7-8-9*/ 
+	background: -moz-linear-gradient(#D1EFFB, #BAE1F1);
+	background: -o-linear-gradient(#D1EFFB, #BAE1F1);
+	background: -ms-linear-gradient(#D1EFFB, #BAE1F1);
+	background: linear-gradient(#D1EFFB, #BAE1F1);
+  	border-color: #C5EAF8 #8AD2EE #77BAD5;
+	border-style: solid;
+	border-width: 1px;
+	color: #3B8FB0;
+}
+/* Tabs ------------------------------*/
+
+.ui-tabs .ui-tabs-hide {
+    position: absolute;
+    left: -10000px;
+}
+
+.tabs {
+	margin: 0 0 20px 0;
+}
+
+.tabs ul.nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.tabs ul.nav li {
+	float: left;
+	position: relative;
+	margin: 0 2px -1px 0;
+	z-index: 10;
+	list-style:none;
+}
+.tabs ul.nav li a {
+	-webkit-border-radius: 3px 3px 0 0;
+	-moz-border-radius: 3px 3px 0 0;
+	border-radius: 3px 3px 0 0;
+	
+	background: #EEEEEE;
+	border-bottom: medium none;
+	color: #8F8E8E;
+	display: block;
+	height: 24px;
+	margin: 0;
+	overflow: hidden;
+	padding: 5px 10px 0;
+}
+.tabs ul.nav li.ui-tabs-selected a {
+  border-bottom: 1px solid #d6d6d6;
+}
+.tabs .tab {
+  background: #f9f9f9;
+  padding: 10px;
+}
+
+/* Toggle ------------------------------*/
+.toggle {
+	margin: 0 0 20px 0;
+}
+.toggle h4 {
+  background:#EEEEEE;
+  cursor: pointer;
+  font-family: Arial,sans-serif !important;
+  font-size: 12px;
+  font-style: normal !important;
+  font-weight: bold;
+  margin: 0 !important;
+  padding: 10px;
+}
+.toggle-inner {
+	padding: 10px;
+	border-top: none;
+	background: #f9f9f9;
+}
+.toggle .ui-icon {
+	background: url('../images/shortcodes/toggles/toggle-closed.png') no-repeat;
+	width: 12px;
+	height: 12px;
+	float: left;
+	margin: 3px 10px 0 0;
+}
+.toggle .ui-state-active .ui-icon { background: url('../images/shortcodes/toggles/toggle-open.png') no-repeat }
+
+/* Accordian ------------------------------*/
+
+.accordion h3 {
+  background: #F1F1F1;
+  cursor: pointer;
+  padding: 10px 12px;
+  position: relative;
+  margin:0 !important;
+}
+.accordion h3 span.ui-icon {
+  background: url("../images/shortcodes/toggles/toggle-closed.png") no-repeat;
+  float: right;
+  height: 12px;
+  margin: 4px 0 0;
+  width: 12px;
+}
+.accordion h3.ui-state-active span.ui-icon { background: url('../images/shortcodes/toggles/toggle-open.png') no-repeat }
+.accordion h3 a {
+  color: #AAAAAA;
+}
+.accordion .ui-accordion-content{
+	position:relative;
+	height:100%;
+}
+.accordion .ui-accordion-content p{
+	background:#fff;
+	padding:10px 12px;
+	margin:0;
+}
